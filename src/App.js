@@ -9,12 +9,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
-        <Route path="destination/" element={<Destinations />}>
-          <Route index path="moon" />
-          <Route path="mars" />
-          <Route path="europe" />
-          <Route path="titan" />
-        </Route>
+        <Route path="destination" element={<Destinations />}/>
       </Route>
     </Routes>
   );

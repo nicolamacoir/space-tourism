@@ -1,25 +1,10 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import BackgroundHome from "../../assets/images/background-home-desktop.jpg"
-import BackgroundDestination from "../../assets/images/background-destination-desktop.jpg"
-
 import { ReactComponent as LogoSvg } from '../../assets/icons/logo.svg';
 
-const getBackground = (location) => {
-  switch(location){
-    default:
-    case 'home': 
-      return BackgroundHome
-    case 'destination':
-      return BackgroundDestination
-  }
-}
-
-
 export const MainPage = styled.div` 
-   
-  background: url(${props => getBackground(props.location)}) no-repeat;
+  background: url(${props => `./assets/backgrounds/background-${props.location}-desktop.jpg`}) no-repeat;
   background-size: cover;
   height: 100%;
 `

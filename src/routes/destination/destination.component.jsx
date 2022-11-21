@@ -1,33 +1,54 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { DestinationsContainer } from './destination.styles';
+import React, { useState } from 'react';
+
+import {
+  DestinationsPage,
+  DestinationsContainer,
+  Header,
+  ImageContainer,
+  DestinationContent,
+  DestinationStats,
+  DestinationMenu,
+  DestinationMenuItem,
+} from './destination.styles';
 
 import content from '../../assets/content/data.json';
 
 const Destinations = () => {
-  const { name, description, distance, travel } = content['destinations'][0];
+  const [page, setPage] = useState(0);
+  const { name, description, images, distance, travel } = content.destinations[page];
   return (
-    <DestinationsContainer>
-      <h5>01 Pick your destination</h5>
-      
-      <div className="destinationContent">
-        <div className="destination-image"></div>
-        <div className="destination-info">
-          <div className="destination-menu"></div>
-          <h1>{name}</h1>
+    <DestinationsPage>
+      <Header>
+        <span>01</span> Pick your destination
+      </Header>
+
+      <DestinationsContainer>
+        <ImageContainer>
+          <img src={images.png} alt="" srcset="" />
+        </ImageContainer>
+        <DestinationContent>
+          <DestinationMenu>
+            {content.destinations.map((destination, index) => (
+              <DestinationMenuItem key={destination.name} onClick={() => setPage(index)}>
+                {destination.name}
+              </DestinationMenuItem>
+            ))}
+          </DestinationMenu>
+          <h2>{name}</h2>
           <p>{description}</p>
-          <div className="destination-stats">
+          <DestinationStats>
             <div>
               <h4>AVG. DISTANCE</h4>
-              <p>{distance}</p>
+              <h3>{distance}</h3>
             </div>
-            <h4>EST. TRAVEL TIME</h4>
-            <p>{travel}</p>
-            <div></div>
-          </div>
-        </div>
-      </div>
-    </DestinationsContainer>
+            <div>
+              <h4>EST. TRAVEL TIME</h4>
+              <h3>{travel}</h3>
+            </div>
+          </DestinationStats>
+        </DestinationContent>
+      </DestinationsContainer>
+    </DestinationsPage>
   );
 };
 

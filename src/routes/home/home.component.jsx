@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExploreContainer, ExploreText, HomeContainer, WelcomeContainer } from './home.styles';
+import { ExploreContainer, HomeContainer, WelcomeContainer } from './home.styles';
 
 const Home = () => {
   return (

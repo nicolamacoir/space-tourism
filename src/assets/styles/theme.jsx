@@ -1,15 +1,12 @@
 const theme = {
   primaryColors: {
-      veryDarkMagenta: 'hsl(300, 43%, 22%)',
-      softPink: 'hsl(333, 80%, 67%)'
-  },
-  complementaryColors: {
-    darkGrayishMagenta: 'hsl(303, 10%, 53%)',
-    lightGrayishMagenta: 'hsl(300, 24%, 96%)',
-    white: 'hsl(0, 0%, 100%)'
+    black: '#0B0D17',
+    grey: '#D0D6F9',
+    white: '#FFFFFF',
   },
   fonts: {
     headings: 'Bellefair',
+    subheading: 'Barlow Condensed',
   },
   fontSize: {
     h1: '150px',

@@ -24,25 +24,28 @@ export const NavLinkContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 120px;
+  padding-right: 165px;
+  padding-left: 123px;
   
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
 `
 
 export const NavLink = styled(Link)`
-  padding: 10px 15px;
+  padding: 38px 15px;
   cursor: pointer;
+  margin: 0
 
   span{
     font-weight: bolder;
   }
 
   &:active {
-    border-bottom: 2px solid rgba(255,255,255,1);
+    border-bottom: 3px solid rgba(255,255,255,1);
   }
 
   &:hover {
-    border-bottom: 2px solid rgba(255,255,255,0.5);
+    border-bottom: 3px solid rgba(255,255,255,0.5);
+    padding-bottom: 35px;
   }
 `

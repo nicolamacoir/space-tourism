@@ -5,7 +5,7 @@ export const DestinationsPage = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 20px 200px;
+  margin: 0px 200px;
 `;
 
 export const Header = styled.div`
@@ -47,7 +47,10 @@ export const DestinationContent = styled.div`
   }
 
   p {
+    color: ${({ theme }) => theme.primaryColors.grey};
     line-height: 32px;
+    max-width: 430px;
+    min-height: 128px;
   }
 `;
 
@@ -71,6 +74,7 @@ export const DestinationMenuItem = styled.div`
 
   &:hover {
     border-bottom: 2px solid rgba(255,255,255,0.5);
+    padding-bottom: 8px;
   }
 
 `

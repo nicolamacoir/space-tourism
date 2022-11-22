@@ -29,7 +29,7 @@ const Destinations = () => {
         <DestinationContent>
           <DestinationMenu>
             {content.destinations.map((destination, index) => (
-              <DestinationMenuItem key={destination.name} onClick={() => setPage(index)}>
+              <DestinationMenuItem key={destination.name} onClick={() => setPage(index)} active={page===index}>
                 {destination.name}
               </DestinationMenuItem>
             ))}

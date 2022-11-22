@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { ReactComponent as LogoSvg } from '../../assets/icons/logo.svg';
 
@@ -20,7 +20,7 @@ export const LogoContainer = styled(LogoSvg)`
   margin-left: 30px;
 `
 
-export const NavLinkContainer = styled.div`
+export const NavItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,8 +31,9 @@ export const NavLinkContainer = styled.div`
   backdrop-filter: blur(40.7742px);
 `
 
-export const NavLink = styled(Link)`
-  padding: 38px 15px;
+export const NavItem = styled(NavLink)`
+  padding: 38px 0;
+  margin-right: 48px;
   cursor: pointer;
   margin: 0
 
@@ -40,8 +41,9 @@ export const NavLink = styled(Link)`
     font-weight: bolder;
   }
 
-  &:active {
+  &:not(:hover).${props => props.activeClassName} {
     border-bottom: 3px solid rgba(255,255,255,1);
+    padding-bottom: 35px;
   }
 
   &:hover {

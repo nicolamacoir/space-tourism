@@ -77,6 +77,10 @@ export const DestinationMenuItem = styled.div`
     padding-bottom: 8px;
   }
 
+  ${({ active }) => active && `
+    border-bottom: 2px solid rgba(255,255,255,1);
+    padding-bottom: 8px;
+  `}
 `
 
 export const DestinationStats = styled.div`

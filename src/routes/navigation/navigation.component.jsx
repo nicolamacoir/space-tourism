@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
-import { LogoContainer, MainPage, NavigationContainer, NavLink, NavLinkContainer } from './navigation.styles';
+import { LogoContainer, MainPage, NavigationContainer, NavItem, NavItemContainer } from './navigation.styles';
 import { useLocation } from "react-router-dom";
 
 const Navigation = () => {
@@ -13,20 +13,20 @@ const Navigation = () => {
         <Link to="/">
           <LogoContainer />
         </Link>
-        <NavLinkContainer>
-          <NavLink to="/">
+        <NavItemContainer>
+          <NavItem to="/" activeClassName="active">
             <span>00</span> Home
-          </NavLink>
-          <NavLink to="/destination">
+          </NavItem>
+          <NavItem to="/destination" activeClassName="active">
             <span>01</span> Destination
-          </NavLink>
-          <NavLink to="/crew">
+          </NavItem>
+          <NavItem to="/crew" activeClassName="active">
             <span>02</span> Crew
-          </NavLink>
-          <NavLink to="/technology">
+          </NavItem>
+          <NavItem to="/technology" activeClassName="active">
             <span>03</span> Technology
-          </NavLink>
-        </NavLinkContainer>
+          </NavItem>
+        </NavItemContainer>
       </NavigationContainer>
       <Outlet />
     </MainPage>

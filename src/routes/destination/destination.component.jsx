@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import {
   DestinationsPage,
   DestinationsContainer,
-  Header,
   ImageContainer,
   DestinationContent,
   DestinationStats,
@@ -11,6 +10,7 @@ import {
   DestinationMenuItem,
 } from './destination.styles';
 
+import SubHeading from '../../components/subheading/subheading.component';
 import content from '../../assets/content/data.json';
 
 const Destinations = () => {
@@ -18,9 +18,9 @@ const Destinations = () => {
   const { name, description, images, distance, travel } = content.destinations[page];
   return (
     <DestinationsPage>
-      <Header>
+      <SubHeading>
         <span>01</span> Pick your destination
-      </Header>
+      </SubHeading>
 
       <DestinationsContainer>
         <ImageContainer>

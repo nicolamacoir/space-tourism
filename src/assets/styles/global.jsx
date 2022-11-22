@@ -28,8 +28,6 @@ const GlobalStyle = createGlobalStyle`
     color:white;
     text-decoration: none;
   }
-
-
 `;
 
 export default GlobalStyle
